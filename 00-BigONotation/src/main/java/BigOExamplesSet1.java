@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class BigOExamplesSet1 {
     public static void main(String[] args) {
         int n=10000;
@@ -8,7 +10,7 @@ public class BigOExamplesSet1 {
         int numberOfOperations=0;
         for(int i=0;i<n;i++){
             numberOfOperations++;
-        }
+        } // n + n^2 + n^3 =23153 = 23142
         long endTime=System.currentTimeMillis();
         System.out.println("Number of Operations in Task #1 O(n)= "+ numberOfOperations + " in "+ (endTime-startTime));
         // Task 1 End...................
@@ -24,7 +26,7 @@ public class BigOExamplesSet1 {
         System.out.println("Number of Operations in Task #2 O(n^2)= "+ numberOfOperations + " in "+ (endTime-startTime));
         // Task 2 End...................
 // ......................................................................................................
-        // Task 3 Three Nested Loops...................
+      // Task 3 Three Nested Loops...................
         startTime=System.currentTimeMillis();
         long numberOfOperations2= (long) 0.0;
         for(int i=0;i<n;i++){
@@ -37,7 +39,7 @@ public class BigOExamplesSet1 {
         System.out.println("Number of Operations in Task #3 O(n^3) = "+ numberOfOperations2 + " in "+ (endTime-startTime));
         // Task 3 End...................
 // ......................................................................................................
-        // Task 4 N and M Nested Loops...................
+       // Task 4 N and M Nested Loops...................
         startTime=System.currentTimeMillis();
         numberOfOperations=0;
         for(int i=0;i<n;i++){
@@ -45,6 +47,7 @@ public class BigOExamplesSet1 {
                 numberOfOperations++;
             }
         }
+        ArrayList<Integer> a=new ArrayList<>();
         endTime=System.currentTimeMillis();
         System.out.println("Number of Operations in Task #4 O(nxm)= "+ numberOfOperations + " in "+ (endTime-startTime));
         // Task 4 End...................
@@ -56,6 +59,6 @@ public class BigOExamplesSet1 {
         }
         endTime=System.currentTimeMillis();
         System.out.println("Number of Operations in Task #5 O(log n)= "+ numberOfOperations + " in "+ (endTime-startTime));
-        // Task 5 End...................
+        // Task 5 End...................*/
     }
 }
