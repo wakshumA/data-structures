@@ -57,10 +57,10 @@ public class MySinglyLinkedList {
                     prev.next = current.next;
                     current.next = null;
                 }
-                prev = current;
-                current = current.next;
+                size--;
             }
-            size--;
+            prev = current;
+            current = current.next;
         }
     }
 
