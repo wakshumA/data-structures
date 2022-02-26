@@ -52,6 +52,7 @@ public class BigOExamplesSet1 {
         System.out.println("Number of Operations in Task #4 O(nxm)= "+ numberOfOperations + " in "+ (endTime-startTime));
         // Task 4 End...................
 
+        // Task 5 Logarithmic Complexity...................
        startTime=System.currentTimeMillis();
        numberOfOperations=0;
         for(int i=1;i<=n;i=i*2){

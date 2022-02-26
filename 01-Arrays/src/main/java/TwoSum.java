@@ -33,7 +33,7 @@ public class TwoSum {
         return new int[]{};
     }
     public static int[] twoSumTwoPointer(int[] array, int target) {
-        //Sort the array. (This has a cost to us !)
+        //Sort the array. (This has a cost! O(nlogn))
         Arrays.sort(array);
         //Define two index pointers i and j (i from 0 to length. / j from length to 0)
         int i=0;
