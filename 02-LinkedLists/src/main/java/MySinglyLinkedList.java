@@ -77,6 +77,30 @@ public class MySinglyLinkedList {
         }
         return ptr1.value;
     }
+    public void removeKthFromLast(int k) {
+        Node prevDelete = null;
+        Node ptr1 = head;
+        Node ptr2 = head;
+        for (int i = 0; i < k - 1; i++) {
+            ptr2 = ptr2.next;
+            if (ptr2 == null) System.out.println("No such value");
+            ;
+        }
+        while (ptr2.next != null) {
+            prevDelete = ptr1;
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+        }
+        if (ptr1 == head) {
+            head = ptr1.next;
+            ptr1.next = null;
+            size--;
+        } else {
+            prevDelete.next = ptr1.next;
+            ptr1.next = null;
+            size--;
+        }
+    }
 
     int indexOf(int value){
         int pos=0;
