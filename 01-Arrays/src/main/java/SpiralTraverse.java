@@ -16,12 +16,16 @@ public class SpiralTraverse {
         int startCol = 0;
         int endCol = array[0].length - 1;
         while (startRow <= endRow && startCol <= endCol) {
+
+            // uprow
             for (int col = startCol; col <= endCol; col++) {
                 result.add(array[startRow][col]);
             }
+            // Right Col
             for (int row = startRow + 1; row <= endRow; row++) {
                 result.add(array[row][endCol]);
             }
+            // Bottom Row
             for (int col = endCol - 1; col >= startCol; col--) {
                 // Handle the edge case when there's a single row
                 // in the middle of the matrix. In this case, we don't
@@ -31,6 +35,8 @@ public class SpiralTraverse {
                 if (startRow == endRow) break;
                 result.add(array[endRow][col]);
             }
+            // Left col to up
+
             for (int row = endRow - 1; row > startRow; row--) {
                 // Handle the edge case when there's a single column
                 // in the middle of the matrix. In this case, we don't

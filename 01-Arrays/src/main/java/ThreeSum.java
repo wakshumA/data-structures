@@ -12,12 +12,14 @@ public class ThreeSum {
     // this is a two pointer solution, for every i,
     // running two pointer solution as in the two sum problem
     public static List<List<Integer>>  threeNumberSum1(int[] array, int targetSum){
+        // Overall complexity nlogn+ n x n = n^2
         Arrays.sort(array);// nlog n
         List<List<Integer>> triplets = new ArrayList<>();
-        for (int i = 0; i < array.length - 2; i++) {
+        for (int i = 0; i < array.length - 2; i++) {  // n times
+            //Reset left and right pointer
             int left = i + 1;
             int right = array.length - 1;
-            while (left < right) {
+            while (left < right) { //n times
                 int currentSum = array[i] + array[left] + array[right];
                 if (currentSum == targetSum) {
 
@@ -36,12 +38,13 @@ public class ThreeSum {
 
 
     // HashMap solution for 3Sum problem.
+    // overall complexity is: nlogn + n + O(n^2) = O(n^2)
     public static List<List<Integer>> threeNumberSum2(int[] nums, int target) {
         Set<List<Integer>> result = new HashSet();
         HashMap<Integer, Integer> map = new HashMap(); // Space
         Arrays.sort(nums);  // O(nlogn)
 
-        // Put all numbers in a HashMap
+        // Put all numbers in a HashMap to create a look up table
         for(int i = 0 ; i < nums.length;i++){
             map.put(nums[i], i);   //O(n)
         }
