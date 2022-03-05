@@ -16,8 +16,8 @@ public class DoublyLinkedList {
                Node nodeToInsert=new Node(value);
                if (head==null) {
                   head=nodeToInsert;
-                  nodeToInsert.prev=null;
-                  nodeToInsert.next=null;
+                 nodeToInsert.prev=null;
+                 nodeToInsert.next=null;
                   tail=nodeToInsert;
                }else {
                 tail.next=nodeToInsert;
