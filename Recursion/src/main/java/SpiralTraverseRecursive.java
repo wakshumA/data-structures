@@ -18,17 +18,21 @@ public class SpiralTraverseRecursive {
         if (startRow > endRow || startCol > endCol) {
             return;
         }
+        // up row
         for (int col = startCol; col <= endCol; col++) {
             result.add(array[startRow][col]);
         }
+        // left col
         for (int row = startRow + 1; row <= endRow; row++) {
             result.add(array[row][endCol]);
         }
+        // bottom row
         for (int col = endCol - 1; col >= startCol; col--) {
 
             if (startRow == endRow) break;
             result.add(array[endRow][col]);
         }
+        //right col
         for (int row = endRow - 1; row >= startRow + 1; row--) {
             if (startCol == endCol) break;
             result.add(array[row][startCol]);
