@@ -7,5 +7,6 @@ public class TaskLongestRange {
     }
     public static int[] longestRange(int[]  array){
 
+    return new int[]{};
     }
 }
