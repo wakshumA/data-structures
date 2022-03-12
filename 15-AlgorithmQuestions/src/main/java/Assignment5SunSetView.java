@@ -8,7 +8,7 @@ public class Assignment5SunSetView {
         sunsetViews(buildings,"EAST").forEach(System.out::println);
     }
     public static ArrayList<Integer> sunsetViews(int[] buildings, String direction) {
-        Stack<Integer> candidateBuildings=new Stack<>();
+        Stack<Integer> candidateBuildings=new Stack<>(); // O(n) space complexity
         int startIdx=0;
         int step=1;
 
@@ -21,7 +21,8 @@ public class Assignment5SunSetView {
             candidateBuildings.push(idx);
             idx+=step;
         }
-        if (direction.equals("WEST")) Collections.reverse(candidateBuildings);
-        return new ArrayList<Integer>(candidateBuildings);
+        //O(n)
+        if (direction.equals("WEST")) Collections.reverse(candidateBuildings); //O(n)
+        return new ArrayList<Integer>(candidateBuildings); // O(2n)= O(n) time complexity
     }
 }
