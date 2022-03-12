@@ -35,15 +35,6 @@ public class MyQueue <T>{
         return (T) frontNode.getValue();
     }
 
-    private Node getPrevious(Node node) {
-        Node<T> current=bottom;
-        while(current!=null){
-            if(current.getNext()==node) return current;
-            current=current.getNext();
-        }
-        return null;
-    }
-
     public int size() {return size;}
 
 
