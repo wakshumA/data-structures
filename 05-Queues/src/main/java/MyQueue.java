@@ -1,39 +1,38 @@
 import java.util.NoSuchElementException;
 
 public class MyQueue <T>{
-    private Node<T> bottom;
-    private Node<T> top;
+    private Node<T> front;
+    private Node<T> back;
     private int size;
 
-    public void push (T item) {
+    public void enqueue (T item) {
         Node<T> node=new Node(item);
-        if (isEmpty()) bottom=top=node;
+        if (isEmpty()) front=back=node;
         else {
-            top.setNext(node);
-            top=node;
+            back.setNext(node);
+            back=node;
         }
         size++;
     }
 
-    public boolean isEmpty() { return bottom==null; }
+    public boolean isEmpty() { return front==null; }
 
-    public T peek() {return (T) top.getValue();}
+    public T peek() {return (T) front.getValue();}
 
-    public T pop() {
-        Node peekNode;
+    public T dequeue() {
+        Node frontNode;
         if(isEmpty()) throw new NoSuchElementException();
-        if(top==bottom) {
-            peekNode=bottom;
-            bottom=top=null;
+        if(front==back) {
+            frontNode=front;
+            front=back=null;
         }
         else{
-            peekNode=top;
-            Node<T> previous=getPrevious(top);
-            top=previous;
-            top.setNext(null);
+            frontNode=front;
+            front=front.getNext();
+
         }
         size--;
-        return (T) peekNode.getValue();
+        return (T) frontNode.getValue();
     }
 
     private Node getPrevious(Node node) {
