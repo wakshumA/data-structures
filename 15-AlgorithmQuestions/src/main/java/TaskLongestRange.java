@@ -30,8 +30,11 @@ public class TaskLongestRange {
                 right++;
                 currentLength++;
             }
-
+            if(currentLength>longest) {
+                longest=currentLength;
+                bestRange=new int[]{left+1,right-1};
+            }
         }
-    return new int[]{};
+    return bestRange;
     }
 }
