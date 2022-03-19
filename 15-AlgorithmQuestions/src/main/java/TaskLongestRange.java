@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class TaskLongestRange {
     public static void main(String[] args) {
-        int[] array={1,11,3,0,15,5,2,4,10,7,12,6};
+        int[] array={1,11,3,0,15,5,2,4,10,7,8,12,6};
         System.out.println(Arrays.toString(longestRange(array)));
     }
     public static int[] longestRange(int[]  array){
@@ -12,9 +12,9 @@ public class TaskLongestRange {
     int longest=0;
         Map<Integer,Boolean> numsVisited=new HashMap<>();
         for(int num:array) {
-            numsVisited.put(num,false);
+            numsVisited.put(num,false); // O(n) x O(1)=O(n)
         }
-        for (int num:array){
+        for (int num:array){ // O(n)
             if(numsVisited.get(num)) continue;
             numsVisited.put(num,true);
             int currentLength=1;
