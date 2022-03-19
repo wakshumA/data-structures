@@ -75,6 +75,9 @@ public class LRUCache {
                     cacheMap.remove(tail.key);
                     size--;
                 }
+         }else {
+             node.value = value;
+             moveToHead(node);
          }
      }
 
