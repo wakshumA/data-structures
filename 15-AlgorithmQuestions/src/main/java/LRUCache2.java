@@ -9,7 +9,7 @@ public class LRUCache2 extends LinkedHashMap<Integer,Integer> {
 public void put(int key,int value){
         super.put(key,value);
 }
-public int get(int key){return super.get(key);}
+public int get(int key){return super.getOrDefault(key,-1);}
 
     @Override
     protected boolean removeEldestEntry(Map.Entry<Integer,Integer> eldest) {
