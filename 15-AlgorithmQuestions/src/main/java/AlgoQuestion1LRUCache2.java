@@ -8,7 +8,9 @@ public class AlgoQuestion1LRUCache2 {
         lhm.put(3,3);
         System.out.println(lhm.get(1));
 
-
+        lhm.entrySet().forEach(entry->{
+            System.out.println("Key is: "+ entry.getKey() + "Value is:" + entry.getValue());
+        });
         System.out.println();
     }
 }
