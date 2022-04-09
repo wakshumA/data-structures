@@ -1,4 +1,4 @@
-import com.oracle.tools.packager.JreUtils;
+
 
 public class MyTree {
     public Node root;
@@ -15,5 +15,24 @@ public void insert(int value){
             root=newNode;
             return;
         }
-}
+        Node current=root;
+        while(true){
+            if(value<=current.value) {
+                if (current.leftChild==null) {
+                    current.leftChild=newNode;
+                  break;
+                }
+                current=current.leftChild;
+            }
+            else  {
+                if (current.rightChild==null) {
+                    current.rightChild=newNode;
+                    break;
+                }
+                current=current.rightChild;
+            }
+
+        }
+}// end insert
+
 }
