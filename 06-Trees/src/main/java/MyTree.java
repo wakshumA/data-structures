@@ -44,7 +44,6 @@ public void insert(int value){
         preOrderTraversal(root.rightChild);
     }
     // In-Order Traversal of Tree  Root-Left-Right
-
     public void inOrderTraversal(Node root){
         if (root==null) return;
         inOrderTraversal(root.leftChild);
