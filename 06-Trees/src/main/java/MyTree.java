@@ -1,4 +1,6 @@
-
+import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class MyTree {
     public Node root;
@@ -50,7 +52,7 @@ public void insert(int value){
         System.out.print(root.value+", ");
         inOrderTraversal(root.rightChild);
     }
-// Post-Order traversal  left-right-root
+// Post-Order traversal  Left-Right-Root
     public void postOrderTraversal(Node root){
         if (root==null) return;
         postOrderTraversal(root.leftChild);
@@ -58,5 +60,16 @@ public void insert(int value){
         System.out.print(root.value+", ");
 
     }
+public  void levelOrderTraversal(){
+      if(root==null) return;
+      Queue<Node> queue = new LinkedList<>();
+      queue.add(root);
+      while (!queue.isEmpty()){
+          Node toVisit= queue.poll();
+          System.out.print(toVisit.value+", ");
+          if(toVisit.leftChild!=null) queue.add(toVisit.leftChild);
+          if(toVisit.rightChild!=null) queue.add(toVisit.rightChild);
+      }// end while
+}// end levelOrder
 
 }
