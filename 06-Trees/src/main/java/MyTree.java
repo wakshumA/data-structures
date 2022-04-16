@@ -106,4 +106,10 @@ public  void levelOrderTraversal(){
         if (isLeaf(root)) return root.value;
         return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
     }
+    // task -6 Height of a node in a BST
+    public int height(Node root){
+        if (root==null) return -1;
+        if (isLeaf(root)) return 0;
+        return 1+ Math.max(height(root.leftChild), height(root.rightChild));
+    }
 }
