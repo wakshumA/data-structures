@@ -19,5 +19,11 @@ public class TreeApp {
         System.out.println("Breadth First Traversal");
         tree.levelOrderTraversal();
 
+        System.out.println();
+        System.out.println("tree contains 6 is : " + tree.contains(6));
+        System.out.println();
+        System.out.println("Print Leaves of The Tree");
+        tree.printLeaves(tree.root);
+
     }
 }

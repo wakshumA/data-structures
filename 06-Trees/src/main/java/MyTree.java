@@ -83,4 +83,16 @@ public  void levelOrderTraversal(){
         }
         return false;
     }
+    // task -2 return if the node is a leaf
+    public boolean isLeaf(Node node) {
+        return node.leftChild==null && node.rightChild==null;
+    }
+
+    public void printLeaves(Node root){
+        if (root==null) return;
+         if (isLeaf(root)) System.out.print(root.value+", ");
+        printLeaves(root.leftChild);
+        printLeaves(root.rightChild);
+    }
+
 }
