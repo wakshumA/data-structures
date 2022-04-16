@@ -60,6 +60,7 @@ public void insert(int value){
         System.out.print(root.value+", ");
 
     }
+    // Assignment BreadthFirst Traversal
 public  void levelOrderTraversal(){
       if(root==null) return;
       Queue<Node> queue = new LinkedList<>();
@@ -71,5 +72,15 @@ public  void levelOrderTraversal(){
           if(toVisit.rightChild!=null) queue.add(toVisit.rightChild);
       }// end while
 }// end levelOrder
-
+// task-1 implement contains method
+    public boolean contains(int value){
+        if (root==null) return false;
+        Node current=root;
+        while(current!=null){
+            if (value< current.value) current=current.leftChild;
+            else if (value> current.value) current=current.rightChild;
+            else return true;
+        }
+        return false;
+    }
 }
