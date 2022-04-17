@@ -8,6 +8,7 @@ public class DoubleLinkListApp {
         System.out.println();
 
         myDoubleLinkList.insertAtPosition(2,5);
+        myDoubleLinkList.insertAfterValue(5,0);
         myDoubleLinkList.printNodes();
     }
 }
