@@ -60,8 +60,23 @@ public class DoublyLinkedList {
                         }
                         node.next = nodeToInsert;
                 }
-                public void insertAfterValue (Node node,int value){
-                        // Write your code here.
+                public void insertAfterValue (int value,int valueToInsert){
+                        Node newNode=new Node(valueToInsert);
+                        Node current=head;
+                        while(current!=null){
+                           if (current.value==value) {
+                               newNode.prev = current;
+                               newNode.next = current.next;
+                               if (current.next == null) {
+                                   tail = newNode;
+                               } else {
+                                   current.next.prev = newNode;
+                               }
+                               current.next = newNode;
+                               break;
+                           }
+                           current=current.next;
+                        }
                 }
                 public void insertAtPosition ( int position, Node nodeToInsert){
                         if (position == 1) {
