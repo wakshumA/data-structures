@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 public class BigOExamplesSet1 {
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class BigOExamplesSet1 {
             numberOfOperations++;
         } // n + n^2 + n^3 =23153 = 23142
         long endTime=System.currentTimeMillis();
-        System.out.println("Number of Operations in Task #1 O(n)= "+ numberOfOperations + " in "+ (endTime-startTime));
+        System.out.println("Number of Operations in Task #1 O(n)= "+ numberOfOperations + " in "+ (endTime-startTime)+" mseconds");
         // Task 1 End...................
         // ......................................................................................................
         // Task 2 Nested Loops...................
@@ -23,7 +24,7 @@ public class BigOExamplesSet1 {
                 numberOfOperations++;
         }
         endTime=System.currentTimeMillis();
-        System.out.println("Number of Operations in Task #2 O(n^2)= "+ numberOfOperations + " in "+ (endTime-startTime));
+        System.out.println("Number of Operations in Task #2 O(n^2)= "+ numberOfOperations + " in "+ (endTime-startTime)+" mseconds");
         // Task 2 End...................
 // ......................................................................................................
       // Task 3 Three Nested Loops...................
@@ -36,7 +37,7 @@ public class BigOExamplesSet1 {
             }
         }
         endTime=System.currentTimeMillis();
-        System.out.println("Number of Operations in Task #3 O(n^3) = "+ numberOfOperations2 + " in "+ (endTime-startTime));
+        System.out.println("Number of Operations in Task #3 O(n^3) = "+ numberOfOperations2 + " in "+ (endTime-startTime)+" mseconds");
         // Task 3 End...................
 // ......................................................................................................
        // Task 4 N and M Nested Loops...................
@@ -59,7 +60,7 @@ public class BigOExamplesSet1 {
             numberOfOperations++;
         }
         endTime=System.currentTimeMillis();
-        System.out.println("Number of Operations in Task #5 O(log n)= "+ numberOfOperations + " in "+ (endTime-startTime));
+        System.out.println("Number of Operations in Task #5 O(log n)= "+ numberOfOperations + " in "+ (endTime-startTime)+" mseconds");
         // Task 5 End...................*/
     }
 }

@@ -19,7 +19,7 @@ public class TreeApp {
         System.out.println("Breadth First Traversal");
         tree.levelOrderTraversal();
 
-        System.out.println();
+        /*System.out.println();
         System.out.println("tree contains 6 is : " + tree.contains(6));
         System.out.println();
         System.out.println("Print Leaves of The Tree");
@@ -28,5 +28,9 @@ public class TreeApp {
         System.out.println( "Number of leaves:  " + tree.countLeaves(tree.root));
         System.out.println();
         System.out.println( "Sum of leaf values:  " + tree.findSumOfLeaves(tree.root));
+        System.out.println("Height of tree is: " + tree.height(tree.root.leftChild));*/
+        System.out.println();
+        System.out.println("Sum of Node Depths : "+ tree.calculateSumNodeDepths());
+
     }
 }

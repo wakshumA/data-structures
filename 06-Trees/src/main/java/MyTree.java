@@ -112,4 +112,15 @@ public  void levelOrderTraversal(){
         if (isLeaf(root)) return 0;
         return 1+ Math.max(height(root.leftChild), height(root.rightChild));
     }
+    // Assignment # 8
+    public int calculateSumNodeDepths(){
+        return nodeDepthSums(root, 0);
+    }
+    public int nodeDepthSums(Node node, int sums){
+        if(node==null) return 0;
+        System.out.println(sums);
+        return sums+ nodeDepthSums(node.leftChild, sums+1) + nodeDepthSums(node.rightChild, sums+1);
+    }
+    // Assignment 8 Calculate Sum of Node Depths
+
 }
