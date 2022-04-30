@@ -20,6 +20,55 @@ public class MyHeap {
             index=parentIndex(index);
         }
     }
+    public int remove(){
+        if(size==0) throw new IllegalStateException();
+        else{
+            int result=items[0];
+            items[0]=items[--size];
+            bubbleDown();
+            return result;
+        }
+    }
+    public void bubbleDown(){
+        int largerChildIndex;
+        int index=0;
+        while(index<=size && !isValidParent(index)){
+          largerChildIndex=largerChildIndex(index);
+          swap(index, largerChildIndex);
+          index=largerChildIndex;
+
+        }
+    }
+    public int largerChildIndex(int index){
+        if (!hasLeftChild(index)) return index;
+        else if (!hasRightChild(index)){
+            return leftChildIndex(index);
+        }
+        return items[leftChildIndex(index)]>items[rightChildIndex(index)] ? leftChildIndex(index): rightChildIndex(index);
+    }
+    public boolean isValidParent(int index){
+        if(!hasLeftChild(index)) return true;
+        else {
+            boolean isValid =items[index] >= items[leftChildIndex(index)];
+            if (hasRightChild(index)) {
+                isValid &= items[index]>= items[rightChildIndex(index)];
+            }
+            return isValid;
+        }
+
+    }
+    public boolean hasLeftChild(int index){
+        return leftChildIndex(index)<=size;
+    }
+    public boolean hasRightChild(int index){
+        return rightChildIndex(index)<=size;
+    }
+    public int leftChildIndex(int index){
+        return index * 2 + 1;
+    }
+    public int rightChildIndex(int index){
+        return index * 2 + 2;
+    }
     public int parentIndex(int index){
         return (index-1)/2;
     }
@@ -32,5 +81,6 @@ public class MyHeap {
         for (int i = 0; i < size; i++) {
             System.out.print(items[i]+", ");
         }
+        System.out.println();
     }
 }
