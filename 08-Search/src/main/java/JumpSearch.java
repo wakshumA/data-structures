@@ -1,4 +1,12 @@
 public class JumpSearch {
+    public static void main(String[] args) {
+        int[] arr=new int[10];
+        for (int i=0;i<10;i++) {
+            arr[i]=i;
+        }
+        //System.out.println(ternarySearchRecursive(arr, 4, 0, arr.length-1));
+        System.out.println(jumpSearch(arr, 4));
+    }
     public static int jumpSearch(int[] array, int data){
             int blockSize=(int) Math.sqrt(array.length);
             int start=0;
