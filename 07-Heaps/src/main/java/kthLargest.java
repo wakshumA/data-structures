@@ -1,10 +1,10 @@
 public class kthLargest {
     public static void main(String[] args) {
-        //int[] numbers={3,2,3,1,2,4,5,5,6};
-        int[] numbers=new int[10];
+        int[] numbers={3,2,3,1,2,4,5,5,6};
+        /*int[] numbers=new int[10];
         for (int i = 0; i < 10; i++) {
            numbers[i]=i;
-        }
+        }*/
 
         System.out.println(getKthLargest(numbers, 4));
     }

@@ -6,6 +6,10 @@ public class MyHeap {
         this.items = new int[capacity];
         this.size=0;
     }
+    public int getRoot(){
+        if (size==0) throw new IllegalStateException();
+        return items[0];
+    }
     public void insert(int value){
         if(size==items.length) throw new IllegalStateException();
         else {
