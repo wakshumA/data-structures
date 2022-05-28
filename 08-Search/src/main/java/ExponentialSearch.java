@@ -1,6 +1,8 @@
 public class ExponentialSearch {
     public static void main(String[] args) {
         int[] arr=new int[10];
+        long start=System.currentTimeMillis();
+        long end=System.currentTimeMillis();
         for (int i=0;i<10;i++) {
             arr[i]=i;
         }
