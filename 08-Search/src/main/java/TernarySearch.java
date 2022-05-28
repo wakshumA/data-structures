@@ -4,7 +4,8 @@ public class TernarySearch {
         for (int i=0;i<10;i++) {
             arr[i]=i;
         }
-        System.out.println(ternarySearchRecursive(arr, 4, 0, arr.length-1));
+        //System.out.println(ternarySearchRecursive(arr, 4, 0, arr.length-1));
+        System.out.println(ternarySearchIterative(arr, 4));
     }
 public static int ternarySearchRecursive(int[] array, int data, int left, int right){
    if (right<left) return -1;//termination
@@ -26,7 +27,7 @@ public static int ternarySearchIterative(int[] array, int data){
         while (right>=left){
             int partition=(right-left)/3;
             int middle1= left+ partition;
-            int middle2= right+partition;
+            int middle2= right-partition;
 
             if (array[middle1]==data) return middle1;
             if (array[middle2]==data) return middle2;
