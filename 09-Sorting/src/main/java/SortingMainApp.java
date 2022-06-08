@@ -5,8 +5,8 @@ public class SortingMainApp {
         var myarray=new int[]{ 8, 2, 4, 1, 3,0,-1};
 
 
-        MyMergeSort mSort= new MyMergeSort();
-        MyMergeSort.mergeSort(myarray);
+        MyQuickSort qSort= new MyQuickSort();
+        MyQuickSort.qsort(myarray,0,myarray.length-1);
         System.out.println(Arrays.toString(myarray));
 
     }
